@@ -12,7 +12,7 @@ const EmailVerify = () => {
 	useEffect(() => {
 		const verifyEmailUrl = async () => {
 			try {
-				const url = `http://localhost:5000/api/adminUser/${param.id}/verify/${param.token}`;
+				const url = `https://rentalrevolve1.onrender.com/api/adminUser/${param.id}/verify/${param.token}`;
 
 				const { data } = await axios.get(url);
 

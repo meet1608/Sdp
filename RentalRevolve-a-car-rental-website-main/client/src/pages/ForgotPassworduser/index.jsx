@@ -10,7 +10,7 @@ const ForgotPassword = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = `http://localhost:5000/api/password-reset-user`;
+			const url = `https://rentalrevolve1.onrender.com/api/password-reset-user`;
 			const { data } = await axios.post(url, { email });
 			setMsg(data.message);
 			setError("");

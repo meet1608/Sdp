@@ -10,7 +10,7 @@ const PasswordReset = () => {
 	const [error, setError] = useState("");
 	const param = useParams();
 	console.log(param)
-	const url = `http://localhost:5000/api/password-reset-employee/${param.id}/admin/${param.token}`;
+	const url = `https://rentalrevolve1.onrender.com/api/password-reset-employee/${param.id}/admin/${param.token}`;
 
 	useEffect(() => {
 		const verifyUrl = async () => {

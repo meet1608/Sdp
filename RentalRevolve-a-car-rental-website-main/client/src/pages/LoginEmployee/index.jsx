@@ -18,7 +18,7 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:5000/api/employeeAuth";
+			const url = "https://rentalrevolve1.onrender.com/api/employeeAuth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data.token);
 			localStorage.setItem("email", data.email);

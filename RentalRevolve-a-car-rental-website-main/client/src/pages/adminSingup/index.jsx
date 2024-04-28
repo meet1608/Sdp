@@ -21,7 +21,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:5000/api/adminUser";
+			const url = "https://rentalrevolve1.onrender.com/api/adminUser";
 		
 			const { data: res } = await axios.post(url, data);
 			setMsg(res.message);

@@ -109,7 +109,7 @@ const Description = () => {
         };
 
         // Step 1: Make payment request
-        const paymentResponse = await fetch("http://localhost:5000/order", {
+        const paymentResponse = await fetch("https://rentalrevolve1.onrender.com/order", {
             method: "POST",
             body: JSON.stringify({
                 amount: totalAmount * 100, // Amount should be in paisa (multiply by 100 for INR)
