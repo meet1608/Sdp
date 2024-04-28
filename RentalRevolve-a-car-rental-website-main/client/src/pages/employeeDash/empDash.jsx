@@ -179,19 +179,23 @@ const [selectedDate, setSelectedDate] = useState(todayDate);
           {bookings.map((booking) => {
             const date1 = booking.bookedTimeSlots.from.slice(0,11);
             // console.log(date1);
-            if(selectedDate===date1 ){
+            if(selectedDate===date1 && booking.car){
               return (
                 <Row gutter={16} className="bs1 mt-3 text-left">
                   <Col lg={6} sm={24}>
-                    <p>
-                      <b>{booking.car.name}</b>
-                    </p>
+                  {booking.car && (
+  <p>
+    <b>{booking.car.name}</b>
+  </p>
+)}
+
                     <p>
                       Total hours : <b>{booking.totalHours}</b>
                     </p>
                     <p>
-                      Rent per hour : <b>{booking.car.rentPerHour}</b>
-                    </p>
+  Rent per hour : <b>{booking.car ? booking.car.rentPerHour : "N/A"}</b>
+</p>
+
                     <p>
                       Total amount : <b>{booking.totalAmount}</b>
                     </p>
@@ -215,8 +219,9 @@ const [selectedDate, setSelectedDate] = useState(todayDate);
                       <b>{moment(booking.createdAt).format("MMM DD yyyy")}</b>
                     </p>
                     <p>
-                      Booking Id: <b>{booking._id}</b>
-                    </p>
+  Booking Id: <b>{booking ? booking._id : "N/A"}</b>
+</p>
+
 
                   </Col>
   

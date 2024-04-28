@@ -20,4 +20,4 @@ const rentalSchema = new mongoose.Schema({
 const Rental = mongoose.model('Rentalreport', rentalSchema);
 
 // Export the model
-module.exports = Rental;
+module.exports = Rental;  
