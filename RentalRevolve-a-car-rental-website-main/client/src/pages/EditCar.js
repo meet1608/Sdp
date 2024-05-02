@@ -78,14 +78,14 @@ function EditCar() {
     <div>
       {/* {loading && <Spinner />} */}
 
-      <header className="header" data-header>
+      {/* <header className="header" data-header>
             <div className="container">
               <div className="overlay" data-overlay />
               <h1 className="h2" style={{fontSize:"35px",marginTop:"10px",color:"#1A9DF4",fontWeight:"bold"}}>RentalRevolve</h1>
 
               {/* <h1>RentalRevolve</h1> */}
 
-              <a href="#" className="logo">
+              {/*<a href="#" className="logo">
               </a>
               <nav className="navbar" data-navbar>
                 <ul className="navbar-list">
@@ -103,13 +103,13 @@ function EditCar() {
                 </button>
 
 
-              <button className="btn" aria-labelledby="aria-label-txt" onClick={onclick1} >
+              <button className="btn" aria-labelledby="aria-label-txt" >
                   <span id="aria-label-txt">Previous Bookings</span>
                 </button>
 
               
 
-                <button className="btn" aria-labelledby="aria-label-txt" href="/BookingCar" onClick={handleLogout}>
+                <button className="btn" aria-labelledby="aria-label-txt" href="/BookingCar">
                   <span id="aria-label-txt">Explore cars</span>
                 </button>
                 <button className="btn user-btn" aria-label="Profile">
@@ -123,7 +123,7 @@ function EditCar() {
                 </button>
               </div>
             </div>
-          </header>
+          </header> */}
       <br />
       <br />
       <br />

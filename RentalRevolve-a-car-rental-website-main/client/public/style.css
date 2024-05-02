@@ -1,25 +1,9 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-/* custom.css */
 .ant-btn-primary {
   /* Your custom styles here */
   background-color: blue !important; /* Example change */
   color: white !important; /* Example change */
 }
 
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 .filter-container {
   position: fixed;
