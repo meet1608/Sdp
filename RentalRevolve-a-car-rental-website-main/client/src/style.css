@@ -117,9 +117,7 @@
 
 @media (min-width: 350px) {
   
-  /**
-   * FEATURED CAR
-   */
+ 
 
   .featured-car-card .card-list { grid-template-columns: 1fr 1fr; }
 
