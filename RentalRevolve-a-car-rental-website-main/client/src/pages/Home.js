@@ -39,10 +39,11 @@ function NewComponent() {
     }, [])
     
     useEffect(() => {
-    
-        setTotalcars(cars)
-        
-    }, [cars])
+      if (Array.isArray(cars)) { // Check if cars is an array before setting totalCars
+          setTotalCars(cars);
+      }
+  }, [cars]);
+  
     
     var i = 0;
 	const handleLogout = () => {
