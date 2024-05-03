@@ -40,7 +40,7 @@ function NewComponent() {
     
     useEffect(() => {
       if (Array.isArray(cars)) { // Check if cars is an array before setting totalCars
-          setTotalCars(cars);
+        setTotalcars(cars);
       }
   }, [cars]);
   
