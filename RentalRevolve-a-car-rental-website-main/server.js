@@ -38,6 +38,12 @@ app.use('/api/rentals/', rentalRoutes);
 app.use(express.json());
 app.use(cors());
 
+
+app.use(cors({
+    origin: 'https://sdp3.vercel.app'
+  }));
+
+
 app.get('/getAdmins',(req,res) => {
     Admin.find()
     .then(admin => res.json(admin))
