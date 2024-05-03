@@ -30,14 +30,35 @@ const BookingCar = () => {
     dispatch(getAllCars());
   }, []);
 
-  useEffect(() => {
-    setTotalcars(cars);
-  }, [cars]);
+  // useEffect(() => {
+  //   setTotalcars(cars);
+  // }, [cars]);
+
+
 
   useEffect(() => {
+    console.log("Cars:", cars); // Log the value of cars
+    setTotalcars(cars);
+  }, [cars]);
+  
+  useEffect(() => {
+    console.log("Filtered Cars:", totalCars); // Log the value of totalCars
+  }, [totalCars]);
+  
+
+
+
+
+  useEffect(() => {
+    // Check if cars is an array before filtering
+    if (!Array.isArray(cars)) {
+      return;
+    }
+  
     // Filter cars based on all parameters
     const filteredCars = cars.filter((car) => {
-      // Check if car matches search term
+      // Your filtering logic here...
+
       const fuse = new Fuse([car], {
         keys: ["name", "fuelType"],
         includeScore: true,
@@ -60,8 +81,54 @@ const BookingCar = () => {
       );
     });
 
+
+
+
+
+
+    
+  
     setTotalcars(filteredCars);
   }, [cars, searchTerm, sliderValues]);
+  
+
+
+
+
+
+
+
+
+
+
+  // useEffect(() => {
+  //   // Filter cars based on all parameters
+  //   const filteredCars = cars.filter((car) => {
+  //     // Check if car matches search term
+  //     const fuse = new Fuse([car], {
+  //       keys: ["name", "fuelType"],
+  //       includeScore: true,
+  //       threshold: 0.4,
+  //     });
+  //     const searchResults = fuse.search(searchTerm);
+  //     const searchMatch = searchResults.length > 0;
+
+  //     // Check if car matches capacity, year, and mileage criteria
+  //     const capacityMatch = car.capacity >= sliderValues.capacity;
+  //     const yearMatch = car.year >= sliderValues.year;
+  //     const mileageMatch = car.mileage >= sliderValues.mileage;
+
+  //     // Return true if car matches all criteria, or if no filters are applied
+  //     return (
+  //       (!searchTerm || searchMatch) &&
+  //       capacityMatch &&
+  //       yearMatch &&
+  //       mileageMatch
+  //     );
+  //   });
+
+  //   setTotalcars(filteredCars);
+  // }, [cars, searchTerm, sliderValues]);
 
   const disabledDate = (current) => {
     return current && current < minDate;

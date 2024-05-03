@@ -58,6 +58,9 @@ app.get('/getAdmins',(req,res) => {
 
 
 // routes
+
+
+
 app.use("/api/users", userRoutes);
 app.use("/api/adminAuth",adminAuth);
 app.use("/api/auth", authRoutes);
